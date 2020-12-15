@@ -1,10 +1,15 @@
+/**
+ * 角色身份确认
+ * @param {*} key 角色身份
+ */
 function checkArray(key) {
+  // 全部角色
   let arr = ['admin', 'superAdmin', 'user']
   let index = arr.indexOf(key)
   if (index > -1) {
-    return true // 有权限
+    return true
   } else {
-    return false // 无权限
+    return false
   }
 }
 
