@@ -10,9 +10,18 @@ function checkArray(key) {
 
 const permission = {
   mounted(el, binding) {
-    let permission = binding.value // 获取到 v-permission的值
+    var permission = binding.value // 获取到 v-permission的值
     if (permission) {
-      let hasPermission = checkArray(permission)
+      var hasPermission = checkArray(permission)
+      if (!hasPermission) {
+        el.parentNode && el.parentNode.removeChild(el)
+      }
+    }
+  },
+  updated(el, binding) {
+    var permission = binding.value // 获取到 v-permission的值
+    if (permission) {
+      var hasPermission = checkArray(permission)
       if (!hasPermission) {
         el.parentNode && el.parentNode.removeChild(el)
       }

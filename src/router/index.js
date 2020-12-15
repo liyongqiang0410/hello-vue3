@@ -39,6 +39,18 @@ const router = createRouter({
           }
         },
         {
+          path: 'drag',
+          name: 'drag',
+          component: () => import("@/views/drag/index"),
+          mate: {
+            title: "drag",
+            icon: 'icon',
+            url: 'drag',
+            filePath: 'drag/index',
+            permission: ["admin"]
+          }
+        },
+        {
           path: 'css',
           name: 'css',
           component: () => import("@/views/css/index"),

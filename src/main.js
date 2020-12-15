@@ -47,7 +47,7 @@ requireComponent.keys().forEach(fileName => {
   )
 })
 
-// 自动引入全局指令
+// 自动引入自定义指令
 const requireDirective = require.context("./directive", false, /\.js$/)
 
 requireDirective.keys().forEach(fileName => {
