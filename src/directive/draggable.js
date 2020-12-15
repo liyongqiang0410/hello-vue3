@@ -4,9 +4,9 @@ export default {
     el.style.position = 'absolute';
     el.parentNode.style.position = 'relative';
     el.onmousedown = function (e) {
-      let disx = e.pageX - el.offsetLeft
-      let disy = e.pageY - el.offsetTop
-      console.log(disx, disy);
+      let disx = e.pageX - el.offsetLeft;
+      let disy = e.pageY - el.offsetTop;
+      el.style.zIndex = 999
       document.onmousemove = function (e) {
         let x = e.pageX - disx
         let y = e.pageY - disy
@@ -28,6 +28,7 @@ export default {
         el.style.top = y + 'px'
       }
       document.onmouseup = function () {
+        el.style.zIndex = 0
         document.onmousemove = document.onmouseup = null
       }
     }

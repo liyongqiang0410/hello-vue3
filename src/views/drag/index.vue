@@ -1,9 +1,9 @@
 <template>
   <div class="drag">
-    <div class="move_item" v-draggable></div>
-    <div class="move_item" v-draggable></div>
-    <div class="move_item" v-draggable></div>
-    <div class="move_item" v-draggable></div>
+    <div class="move_item" v-draggable>1</div>
+    <div class="move_item" v-draggable>2</div>
+    <div class="move_item" v-draggable>3</div>
+    <div class="move_item" v-draggable>4</div>
   </div>
 </template>
 
