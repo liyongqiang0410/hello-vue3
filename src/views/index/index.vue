@@ -1,5 +1,7 @@
 <template>
-  <img src="@/assets/img/1.jpg" alt="" />
+  <div>
+    <img src="@/assets/img/1.jpg" alt="" v-permission="1" />
+  </div>
 </template>
 <script>
 export default {

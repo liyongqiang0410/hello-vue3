@@ -46,4 +46,14 @@ requireComponent.keys().forEach(fileName => {
     componentConfig.default || componentConfig
   )
 })
+
+// 自动引入全局指令
+const requireDirective = require.context("./directive", false, /\.js$/)
+
+requireDirective.keys().forEach(fileName => {
+  const directiveConfig = requireDirective(fileName)
+  const direct = fileName.split("/").pop().replace(/\.\w+$/, "");
+  app.directive(direct, directiveConfig.default)
+})
+
 app.use(router).use(store).use(Antd).mount('#app')
