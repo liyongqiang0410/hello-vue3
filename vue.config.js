@@ -1,7 +1,4 @@
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
-
 const path = require('path')
-const LessThemePlugin = require('webpack-less-theme-plugin')
 
 const resolve = dir => {
   return path.join(__dirname, dir)
@@ -60,25 +57,6 @@ module.exports = {
   },
 
   configureWebpack: () => ({
-    optimization: {
-      minimizer: [
-        new UglifyJsPlugin({
-          uglifyOptions: {
-            // 删除注释
-            output: {
-              comments: false
-            },
-            // 删除console debugger 删除警告
-            compress: {
-              warnings: false, // 删除警告
-              drop_console: true,// console
-              drop_debugger: false,// 删除debugger
-              pure_funcs: ['console.log']//移除console
-            }
-          }
-        })
-      ]
-    },
     resolve: {
       alias: {
         '@': resolve('src'),

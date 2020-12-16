@@ -44,7 +44,7 @@ const router = createRouter({
           component: () => import("@/views/drag/index"),
           mate: {
             title: "drag",
-            icon: 'icon',
+            icon: 'Movedraginterface',
             url: 'drag',
             filePath: 'drag/index',
             permission: ["admin"]
