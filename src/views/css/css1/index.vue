@@ -1,5 +1,5 @@
 <template>
-  <div class="css1">{{ count }}</div>
+  <div class="css1" v-copy="count">{{ count }}</div>
   <addCount :id="'this is my id'" />
 </template>
 
@@ -12,9 +12,8 @@ export default {
     addCount,
   },
   setup() {
-    const count = ref(0); // 申明简单属性
-    function add(val) {
-      console.log(val);
+    const count = ref(1); // 申明简单属性
+    function add() {
       // 操作属性方法
       count.value++;
     }
