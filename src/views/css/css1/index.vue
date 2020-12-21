@@ -1,5 +1,5 @@
 <template>
-  <div class="css1" v-copy="count">{{ count }}</div>
+  <div class="css1" v-copy="count" @click="copy">父组件:{{ count }}</div>
   <addCount :id="'this is my id'" />
 </template>
 
@@ -24,9 +24,9 @@ export default {
     };
   },
   methods: {
-    // add() {
-    //   this.count++;
-    // },
+    copy() {
+      console.log("copy");
+    },
   },
 };
 </script>

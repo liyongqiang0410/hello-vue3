@@ -1,10 +1,11 @@
 import { message } from 'ant-design-vue';
 export default {
   mounted(el, binding) {
+    el.removeEventListener("click", el.handler)
     el.$value = binding.value
     el.handler = () => {
       if (!el.$value) {
-        console.log('无复制内容')
+        message.warning('无复制内容');
         return
       }
       const textarea = document.createElement('textarea')
@@ -16,17 +17,18 @@ export default {
       textarea.select()
       const result = document.execCommand('Copy')
       if (result) {
-        message.success('This is a success message')
+        message.success('复制成功:' + binding.value)
       }
       document.body.removeChild(textarea)
     }
     el.addEventListener('click', el.handler)
   },
   updated(el, binding) {
+    el.removeEventListener("click", el.handler)
     el.$value = binding.value
     el.handler = () => {
       if (!el.$value) {
-        message.error('无复制内容')
+        message.warning('无复制内容');
         return
       }
       const textarea = document.createElement('textarea')
@@ -39,9 +41,13 @@ export default {
       textarea.select()
       const result = document.execCommand('Copy')
       if (result) {
-        message.success('复制成功')
+        message.success('复制成功:' + binding.value)
       }
       document.body.removeChild(textarea)
     }
+    el.addEventListener('click', el.handler)
+  },
+  unmounted(el) {
+    el.removeEventListener("click", el.handler)
   },
 }
