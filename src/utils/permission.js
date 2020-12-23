@@ -69,7 +69,7 @@ Router.beforeEach(async (to, from, next) => {
     if (routerItemNameArr.includes(to.path)) {
       if (currentRouter.mate?.permission.includes(role)) {
         next()
-      } else { 
+      } else {
         next("/403")
       }
     } else {

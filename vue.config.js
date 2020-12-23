@@ -15,6 +15,7 @@ module.exports = {
   assetsDir: '',
   // 是否在开发环境下通过 eslint-loader 在每次保存时 lint 代码。
   lintOnSave: process.env.NODE_ENV !== 'production',
+  lintOnSave: false,
   // 是否使用包含运行时编译器的 Vue 构建版本。设置为 true 后你就可以在 Vue 组件中使用 template 选项了，但是这会让你的应用额外增加 10kb 左右。
   runtimeCompiler: false,
   // 如果你不需要生产环境的 source map，可以将其设置为 false 以加速生产环境构建

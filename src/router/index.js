@@ -135,6 +135,31 @@ const router = createRouter({
             }
           ]
         }, {
+          path: 'binarySystem',
+          name: 'binarySystem',
+          component: () => import('@/views/binarySystem/index'),
+          mate: {
+            title: "binarySystem",
+            icon: 'binarySystem',
+            filePath: 'binarySystem/index',
+            url: 'binarySystem',
+            permission: ["admin"]
+          },
+          children: [
+            {
+              path: 'blob',
+              name: 'blob',
+              component: () => import("@/views/binarySystem/blob/index"),
+              mate: {
+                title: "blob",
+                icon: 'binarySystem',
+                filePath: 'binarySystem/blob/index',
+                url: 'binarySystem/blob',
+                permission: ["admin"]
+              },
+            }
+          ]
+        }, {
           path: 'systemConfig',
           name: 'systemConfig',
           component: () => import('@/views/systemConfig/index'),
@@ -143,7 +168,7 @@ const router = createRouter({
             icon: 'shezhiziduan',
             filePath: 'systemConfig/index',
             url: 'systemConfig',
-            permission: ['superAdmin', 'admin']
+            permission: ['superAdmin']
           }
         }
       ]

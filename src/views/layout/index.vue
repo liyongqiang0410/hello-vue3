@@ -135,7 +135,6 @@
             margin: '24px 16px 0px',
             padding: '24px',
             background: '#fff',
-            minHeight: '280px',
             textAlign: 'left',
             overflow: 'auto',
           }"
