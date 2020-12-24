@@ -160,6 +160,54 @@ const router = createRouter({
             }
           ]
         }, {
+          path: 'vue',
+          name: 'vue',
+          component: () => import("@/views/vue/index"),
+          mate: {
+            title: 'Vue 内置组件',
+            icon: 'Vue',
+            url: 'vue',
+            filePath: 'vue/index',
+            permission: ['admin'],
+          },
+          children: [
+            {
+              path: 'builtInComponent',
+              name: 'builtInComponent',
+              component: () => import("@/views/vue/builtInComponent/index.vue"),
+              mate: {
+                title: '动态组件',
+                icon: 'Vue',
+                url: 'vue/builtInComponent',
+                filePath: 'vue/builtInComponent/index',
+                permission: ["admin"]
+              }
+            },
+            {
+              path: 'suspense',
+              name: 'suspense',
+              component: () => import("@/views/vue/suspense/index"),
+              mate: {
+                title: 'suspense 悬念',
+                icon: 'Vue',
+                url: 'vue/suspense',
+                filePath: 'vue/suspense/index',
+                permission: ["admin"]
+              }
+            }, {
+              path: 'teleport',
+              name: 'Teleport',
+              component: () => import('@/views/vue/teleport/index'),
+              mate: {
+                title: 'teleport',
+                icon: 'Vue',
+                url: 'vue/teleport',
+                filePath: 'vue/teleport/index',
+                permission: ['admin']
+              }
+            }
+          ]
+        }, {
           path: 'systemConfig',
           name: 'systemConfig',
           component: () => import('@/views/systemConfig/index'),
@@ -168,7 +216,7 @@ const router = createRouter({
             icon: 'shezhiziduan',
             filePath: 'systemConfig/index',
             url: 'systemConfig',
-            permission: ['superAdmin']
+            permission: ['superAdmin', "admin"]
           }
         }
       ]
