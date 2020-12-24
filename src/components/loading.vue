@@ -33,7 +33,7 @@ export default {
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: 9999;
+  z-index: 99999;
   background-color: rgba($color: #000000, $alpha: 0.8);
   .loader {
     position: absolute;
