@@ -21,7 +21,11 @@
           <template v-for="item in router" :key="item.path">
             <!-- 无 children 路由 -->
             <router-link :to="`/${item.path}`">
-              <a-menu-item v-if="!!!item.children" :key="item.name">
+              <a-menu-item
+                v-if="!!!item.children"
+                :key="item.name"
+                style="display: flex; align-items: center"
+              >
                 <SvgIcon :iconClass="item.mate.icon"></SvgIcon>
                 <span v-if="!collapsed" style="margin-left: 10px">{{
                   item.mate.title
@@ -34,7 +38,7 @@
               :key="item.children[0].name"
             >
               <router-link :to="`/${item.children[0].mate.url}`">
-                <a-menu-item>
+                <a-menu-item style="display: flex; align-items: center">
                   <SvgIcon :iconClass="item.children[0].mate.icon"></SvgIcon>
                   <span v-if="!collapsed" style="margin-left: 10px">{{
                     item.children[0].mate.title
@@ -43,25 +47,26 @@
               </router-link>
             </div>
             <!-- 路由的 children 大于 1 显示父级菜单-->
-            <a-sub-menu
-              v-if="item?.children?.length > 1"
-              :key="item.name"
-              style="color: #1890ff"
-            >
+            <a-sub-menu v-if="item?.children?.length > 1" :key="item.name">
               <template #title>
-                <SvgIcon
-                  :iconClass="item.mate.icon"
-                  style="fill: rgba(255, 255, 255, 0.65)"
-                ></SvgIcon>
-                <span
-                  v-if="!collapsed"
-                  style="margin-left: 10px; color: rgba(255, 255, 255, 0.65)"
-                  >{{ item.mate.title }}</span
-                >
+                <div style="display: flex; align-items: center">
+                  <SvgIcon
+                    :iconClass="item.mate.icon"
+                    style="fill: rgba(255, 255, 255, 0.65)"
+                  ></SvgIcon>
+                  <span
+                    v-if="!collapsed"
+                    style="margin-left: 10px; color: rgba(255, 255, 255, 0.65)"
+                    >{{ item.mate.title }}</span
+                  >
+                </div>
               </template>
               <div v-for="tem in item.children" :key="tem.name">
                 <router-link :to="`/${tem.mate.url}`">
-                  <a-menu-item key="tem.name">
+                  <a-menu-item
+                    key="tem.name"
+                    style="display: flex; align-items: center"
+                  >
                     <SvgIcon :iconClass="tem.mate.icon"></SvgIcon>
                     <span v-if="!collapsed" style="margin-left: 10px">{{
                       tem.mate.title
