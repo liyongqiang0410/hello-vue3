@@ -1,3 +1,20 @@
+/*
+ *                   江城子 . 程序员之歌
+ * 
+ *               十年生死两茫茫，写程序，到天亮。
+ *                   千行代码，Bug何处藏。
+ *               纵使上线又怎样，朝令改，夕断肠。
+ * 
+ *               领导每天新想法，天天改，日日忙。
+ *                   相顾无言，惟有泪千行。
+ *               每晚灯火阑珊处，夜难寐，加班狂。
+ * 
+ * 
+ * @Author: liyongqiang
+ * @Date: 2020-12-16 15:58:21
+ * @LastEditTime: 2020-12-25 10:03:21
+ * @FilePath: \hello-vue3\src\router\index.js
+ */
 import { createWebHashHistory, createRouter } from 'vue-router'
 
 const router = createRouter({

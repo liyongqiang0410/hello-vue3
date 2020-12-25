@@ -44,7 +44,9 @@ import { ref, defineAsyncComponent, reactive, nextTick } from "vue";
 import childOne from "./components/childOne";
 import childTwo from "./components/childTwo";
 import childThree from "./components/childThree";
-const asyncChildOne = defineAsyncComponent(() => import("./components/childOne"));
+const asyncChildOne = defineAsyncComponent(() =>
+  import("./components/childOne")
+);
 export default {
   name: "buildInComponent",
   components: {
@@ -55,6 +57,7 @@ export default {
   },
   setup() {
     let childComponent = ref("childOne");
+
     function changeChildComponent(val) {
       childComponent = val;
     }
