@@ -12,7 +12,7 @@
  * 
  * @Author: liyongqiang
  * @Date: 2020-12-16 15:58:21
- * @LastEditTime: 2020-12-25 10:03:21
+ * @LastEditTime: 2020-12-25 15:08:56
  * @FilePath: \hello-vue3\src\router\index.js
  */
 import { createWebHashHistory, createRouter } from 'vue-router'
@@ -220,6 +220,17 @@ const router = createRouter({
                 icon: 'Vue',
                 url: 'vue/teleport',
                 filePath: 'vue/teleport/index',
+                permission: ['admin']
+              }
+            }, {
+              path: 'transition',
+              name: 'transition',
+              component: () => import('@/views/vue/transition/index'),
+              mate: {
+                title: 'transition',
+                icon: 'Vue',
+                url: 'vue/transition',
+                filePath: 'vue/transition/index',
                 permission: ['admin']
               }
             }
