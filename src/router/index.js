@@ -12,7 +12,7 @@
  * 
  * @Author: liyongqiang
  * @Date: 2020-12-16 15:58:21
- * @LastEditTime: 2020-12-25 16:19:00
+ * @LastEditTime: 2020-12-28 15:06:27
  * @FilePath: \hello-vue3\src\router\index.js
  */
 import { createWebHashHistory, createRouter } from 'vue-router'
@@ -42,8 +42,7 @@ const router = createRouter({
             filePath: 'index/index',
             permission: ["admin"]
           }
-        },
-        {
+        }, {
           path: 'icon',
           name: 'icon',
           component: () => import("@/views/icon/index"),

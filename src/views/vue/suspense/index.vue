@@ -1,7 +1,13 @@
+<!--
+ * @Author: liyongqiang
+ * @Date: 2020-12-24 10:22:14
+ * @LastEditTime: 2020-12-28 15:30:58
+ * @FilePath: \hello-vue3\src\views\vue\suspense\index.vue
+-->
 <template>
   <div class="suspense">
-    <!-- Suspense 单根节点组件 -->
     <Suspense>
+      <!-- Suspense template 单根节点组件 -->
       <template #default>
         <div>
           <event />
