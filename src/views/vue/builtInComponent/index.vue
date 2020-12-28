@@ -1,3 +1,9 @@
+<!--
+ * @Author: liyongqiang
+ * @Date: 2020-12-24 10:57:06
+ * @LastEditTime: 2020-12-25 15:13:11
+ * @FilePath: \hello-vue3\src\views\vue\builtInComponent\index.vue
+-->
 <template>
   <div class="buildInComponent">
     <h1 class="title">内置组件 Component</h1>
@@ -16,19 +22,15 @@
     <div :ref="childCom">
       <span class="title3">未缓存</span>
       <a-divider orientation="left"></a-divider>
-      <transition name="fade" mode="out-in" appear>
-        <component :is="childComponent"></component>
-      </transition>
+      <component :is="childComponent"></component>
     </div>
     <a-divider orientation="left"></a-divider>
     <div>
       <span class="title3">失活的组件将会被缓存！</span>
       <a-divider orientation="left"></a-divider>
-      <transition name="fade" mode="out-in" appear>
-        <keep-alive include="childOne,childThree" :max="3">
-          <component :is="childComponent"></component>
-        </keep-alive>
-      </transition>
+      <keep-alive include="childOne,childThree" :max="3">
+        <component :is="childComponent"></component>
+      </keep-alive>
     </div>
     <a-divider orientation="left"></a-divider>
     <div>

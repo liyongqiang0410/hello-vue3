@@ -12,7 +12,7 @@
  * 
  * @Author: liyongqiang
  * @Date: 2020-12-16 15:58:21
- * @LastEditTime: 2020-12-25 15:08:56
+ * @LastEditTime: 2020-12-25 16:19:00
  * @FilePath: \hello-vue3\src\router\index.js
  */
 import { createWebHashHistory, createRouter } from 'vue-router'
@@ -64,6 +64,17 @@ const router = createRouter({
             icon: 'Movedraginterface',
             url: 'drag',
             filePath: 'drag/index',
+            permission: ["admin"]
+          }
+        }, {
+          path: 'carousel',
+          name: 'carousel',
+          component: () => import("@/views/carousel/index"),
+          mate: {
+            title: "carousel",
+            icon: 'threeD',
+            url: 'carousel',
+            filePath: 'carousel/index',
             permission: ["admin"]
           }
         },

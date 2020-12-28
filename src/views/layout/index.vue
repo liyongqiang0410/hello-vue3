@@ -4,7 +4,12 @@
     :style="{ '--theme': checked ? 'invert(1) hue-rotate(180deg)' : '' }"
   >
     <a-layout id="components-layout-demo-custom-trigger">
-      <a-layout-sider v-model:collapsed="collapsed" :trigger="null" collapsible>
+      <a-layout-sider
+        v-model:collapsed="collapsed"
+        :trigger="null"
+        collapsible
+        style="overflow: auto"
+      >
         <!-- logo -->
         <div class="logo" style="text-align: left; display: flex">
           <img src="@/assets/img/logo.png" alt="" />
@@ -49,7 +54,7 @@
             <!-- 路由的 children 大于 1 显示父级菜单-->
             <a-sub-menu v-if="item?.children?.length > 1" :key="item.name">
               <template #title>
-                <div style="display: flex; align-items: center">
+                <div style="display: flex; align-items: center; height: 100%">
                   <SvgIcon
                     :iconClass="item.mate.icon"
                     style="fill: rgba(255, 255, 255, 0.65)"
