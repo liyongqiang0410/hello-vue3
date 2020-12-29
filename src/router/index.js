@@ -12,7 +12,7 @@
  * 
  * @Author: liyongqiang
  * @Date: 2020-12-16 15:58:21
- * @LastEditTime: 2020-12-28 15:06:27
+ * @LastEditTime: 2020-12-28 16:02:26
  * @FilePath: \hello-vue3\src\router\index.js
  */
 import { createWebHashHistory, createRouter } from 'vue-router'
@@ -40,6 +40,17 @@ const router = createRouter({
             icon: 'shouye',
             url: 'index',
             filePath: 'index/index',
+            permission: ["admin"]
+          }
+        }, {
+          path: 'viewer',
+          name: 'viewer',
+          component: () => import("@/views/viewer/index"),
+          mate: {
+            title: "viewer",
+            icon: 'shouye',
+            url: 'viewer',
+            filePath: 'viewer/index',
             permission: ["admin"]
           }
         }, {

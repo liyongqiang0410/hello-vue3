@@ -1,3 +1,9 @@
+/*
+ * @Author: liyongqiang
+ * @Date: 2020-12-16 15:58:21
+ * @LastEditTime: 2020-12-28 16:39:42
+ * @FilePath: \hello-vue3\src\main.js
+ */
 import { createApp } from 'vue'
 import App from './App.vue'
 import './utils/permission.js'
@@ -11,6 +17,7 @@ import './assets/icons/index'
 // ant-design-vue
 import Antd from 'ant-design-vue'
 import 'ant-design-vue/dist/antd.css'
+import 'viewerjs/dist/viewer.css'
 
 const app = createApp(App)
 
