@@ -12,7 +12,7 @@
  * 
  * @Author: liyongqiang
  * @Date: 2020-12-16 15:58:21
- * @LastEditTime: 2020-12-28 16:02:26
+ * @LastEditTime: 2020-12-29 11:49:12
  * @FilePath: \hello-vue3\src\router\index.js
  */
 import { createWebHashHistory, createRouter } from 'vue-router'
@@ -87,8 +87,32 @@ const router = createRouter({
             filePath: 'carousel/index',
             permission: ["admin"]
           }
-        },
-        {
+        }, {
+          path: 'svg',
+          name: 'svg',
+          component: () => import("@/views/svg/index"),
+          mate: {
+            title: "svg",
+            icon: 'threeD',
+            url: 'svg',
+            filePath: 'svg/index',
+            permission: ["admin"]
+          },
+          children: [
+            {
+              path: 'offsetPath',
+              name: 'offsetPath',
+              component: () => import("@/views/svg/offsetPath/index"),
+              mate: {
+                title: "offsetPath",
+                icon: 'threeD',
+                url: 'svg/offsetPath',
+                filePath: 'svg/offsetPath/index',
+                permission: ["admin"]
+              }
+            }
+          ]
+        }, {
           path: 'css',
           name: 'css',
           component: () => import("@/views/css/index"),
