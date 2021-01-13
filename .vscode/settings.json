@@ -1,0 +1,167 @@
+{
+  "vue3snippets.enable-compile-vue-file-on-did-save-code": false,
+  "compile-hero.disable-compile-files-on-did-save-code": true,
+  "[vue]": {
+    "editor.wordWrap": "wordWrapColumn",
+    "diffEditor.wordWrap": "on",
+    "editor.defaultFormatter": "octref.vetur"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "workbench.colorTheme": "One Monokai",
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "emmet.triggerExpansionOnTab": true,
+  "editor.formatOnSave": true,
+  "javascript.format.enable": true,
+  "git.enableSmartCommit": true,
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "liveServer.settings.donotShowInfoMsg": true,
+  "explorer.confirmDelete": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "files.exclude": {
+    "**/.idea": true
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": true,
+    "source.fixAll.eslint": true
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "vscode.debug-auto-launch"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "prettier.htmlWhitespaceSensitivity": "ignore",
+  "prettier.vueIndentScriptAndStyle": true,
+  "docthis.authorName": "liyongqiang 1623386424@qq.com",
+  "docthis.includeAuthorTag": true,
+  "docthis.includeDescriptionTag": true,
+  "docthis.enableHungarianNotationEvaluation": true,
+  "docthis.inferTypesFromNames": true,
+  "vetur.format.defaultFormatter.html": "prettier",
+  "files.autoSave": "onFocusChange",
+  "editor.minimap.enabled": false,
+  "files.associations": {
+    "*.html": "html"
+  },
+  "editor.wordWrapColumn": 180,
+  "prettier.printWidth": 180,
+  "html.format.wrapLineLength": 180,
+  "typescript.tsdk": "",
+  "editor.fontSize": 13,
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "window.zoomLevel": 0,
+  //!--  Better Comments 注释颜色高亮
+  "better-comments.tags": [
+    {
+      "tag": "!--",
+      "color": "#D65DB1",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "!",
+      "color": "#FF2D00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "?",
+      "color": "#3498DB",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "//",
+      "color": "#fff",
+      "strikethrough": true,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "todo",
+      "color": "#FF8C00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "*",
+      "color": "#98C379",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    }
+  ],
+  // * 对应括号连线颜色
+  "bracketPairColorizer.consecutivePairColors": [
+    // ! bracket Pair Colorizer 
+    "()",
+    "[]",
+    "{}",
+    "<>",
+    [
+      "Orchid",
+      "Gold",
+      "LightSkyBlue"
+    ],
+    "Red"
+  ],
+  // * 注释头部图案
+  "fileheader.configObj": {
+    "designAddHead": "random" // 命令行生成图案注释 默认关闭该功能
+  },
+  "fileheader.customMade": {
+    "Author": "liyongqiang",
+    "Date": "Do not edit", // 文件创建时间(不变)
+    "custom_string_obkoro1": "power by @liyongqiang(1623386424)",
+    "LastEditors": "liyongqiang", 
+    "LastEditTime": "yyyy-MM-dd HH:mm:ss", // 文件最后编辑时间
+    "FilePath": "Do not edit", // 文件在项目中的相对路径 自动更新
+    
+  },
+  // vue 多属性不换行
+  "vetur.format.defaultFormatterOptions": {
+
+    "js-beautify-html": {
+      "wrap_line_length": 180,
+      "wrap_attributes": "auto",
+      "end_with_newline": false
+    },
+    "prettyhtml": {
+      "printWidth": 180,
+      "singleQuote": false,
+      "wrapAttributes": false,
+      "sortAttributes": false
+    }
+  },
+  "prettier.requireConfig": true
+}
