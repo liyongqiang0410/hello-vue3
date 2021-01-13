@@ -12,7 +12,7 @@
  * 
  * @Author: liyongqiang
  * @Date: 2020-12-16 15:58:21
- * @LastEditTime: 2021-01-11 14:22:07
+ * @LastEditTime: 2021-01-13 09:27:27
  * @FilePath: \hello-vue3\src\router\index.js
  */
 import { createWebHashHistory, createRouter } from 'vue-router'
@@ -74,6 +74,17 @@ const router = createRouter({
             icon: 'Movedraginterface',
             url: 'drag',
             filePath: 'drag/index',
+            permission: ["admin"]
+          }
+        }, {
+          path: 'html',
+          name: 'html',
+          component: () => import("@/views/html/index"),
+          mate: {
+            title: "html",
+            icon: 'Movedraginterface',
+            url: 'html',
+            filePath: 'html/index',
             permission: ["admin"]
           }
         }, {
