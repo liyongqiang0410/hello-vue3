@@ -12,7 +12,7 @@
  * 
  * @Author: liyongqiang
  * @Date: 2020-12-16 15:58:21
- * @LastEditTime: 2020-12-29 11:49:12
+ * @LastEditTime: 2021-01-11 14:22:07
  * @FilePath: \hello-vue3\src\router\index.js
  */
 import { createWebHashHistory, createRouter } from 'vue-router'
@@ -93,7 +93,7 @@ const router = createRouter({
           component: () => import("@/views/svg/index"),
           mate: {
             title: "svg",
-            icon: 'threeD',
+            icon: 'svgf6',
             url: 'svg',
             filePath: 'svg/index',
             permission: ["admin"]
@@ -105,7 +105,7 @@ const router = createRouter({
               component: () => import("@/views/svg/offsetPath/index"),
               mate: {
                 title: "offsetPath",
-                icon: 'threeD',
+                icon: 'svgf6',
                 url: 'svg/offsetPath',
                 filePath: 'svg/offsetPath/index',
                 permission: ["admin"]
@@ -219,6 +219,31 @@ const router = createRouter({
                 url: 'binarySystem/blob',
                 permission: ["admin"]
               },
+            }
+          ]
+        }, {
+          path: 'js',
+          name: 'js',
+          component: () => import("@/views/js/index"),
+          mate: {
+            title: 'js 方法',
+            icon: 'js',
+            url: 'js',
+            filePath: 'js/index',
+            permission: ['admin']
+          },
+          children: [
+            {
+              path: 'reduce',
+              name: 'reduce',
+              component: () => import("@/views/js/reduce/index"),
+              mate: {
+                title: 'reduce',
+                icon: 'js',
+                url: 'js/reduce',
+                filePath: 'vue/reduce/index',
+                permission: ["admin"]
+              }
             }
           ]
         }, {

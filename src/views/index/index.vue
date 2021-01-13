@@ -1,3 +1,9 @@
+<!--
+ * @Author: liyongqiang
+ * @Date: 2020-12-16 15:58:21
+ * @LastEditTime: 2021-01-11 09:43:41
+ * @FilePath: \hello-vue3\src\views\index\index.vue
+-->
 <template>
   <div v-waterMarker="{ text: '背景水印222', font: '14px', textColor: '#ccc' }">
     <img src="@/assets/img/1.jpg" alt="" @click="logName" v-permission="1" />
