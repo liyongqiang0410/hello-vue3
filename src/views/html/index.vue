@@ -20,9 +20,9 @@
 //  * 
 //  * @Author: liyongqiang
 //  * @Date: 2021-01-13 09:26:42
-//  * @power by @liyongqiang(1623386424)
+//  * @Powerd by @liyongqiang(1623386424)
  * @LastEditors: liyongqiang
- * @LastEditTime: 2021-01-13 11:32:15
+ * @LastEditTime: 2021-01-14 14:59:57
  * @FilePath: \hello-vue3\src\views\html\index.vue
  -->
 <template>
@@ -61,15 +61,24 @@
     <div class="main">
       <div id="first_out">
         <input type="text" id="first" />
+        <img
+          v-errorImg="
+            'https://img-blog.csdnimg.cn/20191016152304540.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3hpYW9tYW5vbnlv,size_16,color_FFFFFF,t_70'
+          "
+          alt=""
+        />
       </div>
       <div id="second_out">
         <input type="text" id="second" />
+        <img v-errorImg="'https://img-blog.csdnimg.cn'" alt="" />
       </div>
       <div id="third_out">
         <input type="text" id="third" />
+        <img v-errorImg="" alt="" />
       </div>
       <div id="fourth_out">
         <input type="text" id="fourth" />
+        <img v-errorImg="" alt="" />
       </div>
     </div>
   </div>
@@ -89,11 +98,15 @@ export default {
         color: "#fff",
         fontWeight: 700,
       },
+      defaultImgSrc: require("@/assets/defaultImg/errorImg.svg"),
     };
   },
   methods: {
     anchor(num) {
       this.activeAnchor = num;
+    },
+    errorImg(e) {
+      e.target.src = this.defaultImgSrc;
     },
   },
 };

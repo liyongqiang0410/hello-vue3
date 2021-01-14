@@ -1,7 +1,7 @@
 /*
  * @Author: liyongqiang
  * @Date: 2020-12-21 16:31:04
- * @LastEditTime: 2020-12-28 09:48:50
+ * @LastEditTime: 2021-01-14 14:29:07
  * @FilePath: \hello-vue3\src\directive\lazy.js
  */
 import baseImg from "@/assets/defaultImg/default.jpg";

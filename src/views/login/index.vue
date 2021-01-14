@@ -1,7 +1,7 @@
 <!--
  * @Author: liyongqiang
  * @Date: 2020-12-16 15:58:21
- * @LastEditTime: 2020-12-25 10:14:50
+ * @LastEditTime: 2021-01-13 11:46:46
  * @FilePath: \hello-vue3\src\views\login\index.vue
 -->
 <template>
@@ -16,6 +16,7 @@
       <div class="title" id="title7">7</div>
       <div class="title" id="title8">8</div>
     </div>
+
     <div class="fixed">
       <div><a href="javascript:" @click="scrollTo('#title1')">1</a></div>
       <div><a href="javascript:" @click="scrollTo('#title2')">2</a></div>
