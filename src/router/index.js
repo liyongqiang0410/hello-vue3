@@ -12,7 +12,7 @@
  * 
  * @Author: liyongqiang
  * @Date: 2020-12-16 15:58:21
- * @LastEditTime: 2021-01-13 09:27:27
+ * @LastEditTime: 2021-01-25 15:23:18
  * @FilePath: \hello-vue3\src\router\index.js
  */
 import { createWebHashHistory, createRouter } from 'vue-router'
@@ -253,6 +253,17 @@ const router = createRouter({
                 icon: 'js',
                 url: 'js/reduce',
                 filePath: 'vue/reduce/index',
+                permission: ["admin"]
+              }
+            }, {
+              path: 'optimize',
+              name: 'optimize',
+              component: () => import("@/views/js/optimize/index"),
+              mate: {
+                title: 'optimize',
+                icon: 'js',
+                url: 'js/optimize',
+                filePath: 'vue/optimize/index',
                 permission: ["admin"]
               }
             }
