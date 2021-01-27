@@ -146,7 +146,6 @@
     "LastEditors": "liyongqiang", 
     "LastEditTime": "yyyy-MM-dd HH:mm:ss", // 文件最后编辑时间
     "FilePath": "Do not edit", // 文件在项目中的相对路径 自动更新
-    
   },
   // vue 多属性不换行
   "vetur.format.defaultFormatterOptions": {
