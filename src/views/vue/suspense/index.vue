@@ -1,7 +1,7 @@
 <!--
  * @Author: liyongqiang
  * @Date: 2020-12-24 10:22:14
- * @LastEditTime: 2020-12-28 15:30:58
+ * @LastEditTime: 2021-02-18 14:36:07
  * @FilePath: \hello-vue3\src\views\vue\suspense\index.vue
 -->
 <template>
@@ -23,11 +23,18 @@
 </template>
 
 <script>
+// import { defineAsyncComponent } from "vue";
 import suspenseLoading from "./components/loading";
 import event from "./components/event";
 export default {
   name: "suspense",
   components: {
+    // suspenseLoading: defineAsyncComponent(() => {
+    //   import("./components/loading");
+    // }),
+    // event: defineAsyncComponent(() => {
+    //   import("./components/event");
+    // }),
     suspenseLoading,
     event,
   },

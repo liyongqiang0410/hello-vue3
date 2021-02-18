@@ -1,7 +1,7 @@
 /*
  * @Author: liyongqiang
  * @Date: 2020-12-16 15:58:21
- * @LastEditTime: 2021-01-26 14:01:56
+ * @LastEditTime: 2021-02-02 09:25:58
  * @FilePath: \hello-vue3\src\main.js
  */
 import { createApp } from 'vue'
